@@ -3,8 +3,6 @@ package com.example.retrofitlesson
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.retrofitlesson.databinding.ActivityMainBinding
 import com.example.retrofitlesson.retrofit.ProductApi
 import kotlinx.coroutines.CoroutineScope
@@ -32,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         butt.setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
-                val product = productApi.getProductById()
+                val product = productApi.getProductById(3)
                 runOnUiThread {
                     tv.text = product.brand
                 }
