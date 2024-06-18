@@ -34,9 +34,10 @@ class MainActivity : AppCompatActivity() {
             CoroutineScope(Dispatchers.IO).launch {
                 val product = productApi.getProductById()
                 runOnUiThread {
-                    tv.text = product.title
+                    tv.text = product.brand
                 }
             }
         }
+
     }
 }

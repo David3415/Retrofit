@@ -10,6 +10,6 @@ data class Product(
     val stock: Float,
     val brand: String,
     val category: String,
-    val thumbernail: String,
+    val thumbnail: String,
     val images: List<String>
 )
